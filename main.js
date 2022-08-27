@@ -16,3 +16,14 @@ const map = (array, callback) => {
   return array.map(callback)
 }
 console.log(map([1, 2, 3], addTwo)); // [ 3, 4, 5 ]
+
+// OR
+
+const map = (array, callback) => {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++){
+    newArray.push(callback(array[i]));
+  }
+  return newArray;
+}
+ console.log(map([1, 2, 3], addTwo)); // [ 3, 4, 5 ]
